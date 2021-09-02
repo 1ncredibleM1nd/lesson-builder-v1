@@ -1,34 +1,36 @@
-
+import {React, useState} from 'react'
 import Navbar from "../navbar";
 import {Row,Col, Button} from 'antd'
-import SideBar from "../sidebar";
-import LessonName from "../lesson-name";
-import LessonTitle from "../title";
-
+import LessonLayout from '../lessonLayout';
 import './app.sass'
-import ProdSlider from "../slider";
+
 
 function App() {
+
+  const [lessonCreated, setCreate] = useState(false)
+
+
+  const buttonCreate = !lessonCreated ?
+   <Row justify='center'><Button type="primary" onClick={()=>{setCreate(true)}}>Создать урок</Button></Row> : null
+  
+   const lessonLayout = lessonCreated ? <LessonLayout/> : null
+
+
   return (
     <div className="App">
       <header className="App-header">
+        </header>
       <Navbar/>
       <Row>
-      <Col span={4}>
-      <Button type="primary">Создать урок</Button>
-        <SideBar/></Col>
-      <Col span={20}><LessonName/>
-      <LessonTitle/>
-      <ProdSlider/>
-      
+      <Col span={24}>
+        {buttonCreate}
+       {lessonLayout}
       </Col>
-      
     </Row>
         
         
         
-         
-      </header>
+      
     </div>
   );
 }
