@@ -23,7 +23,6 @@ const LessonName = ()=>{
     return (
         <div className='title-container'>
            {lessonName}
-         
         </div>
     )
 }

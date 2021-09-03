@@ -1,9 +1,11 @@
 import {React, useState} from 'react'
 
 
-const EditorHOC = (WrappedBlock)=>{
+const EditorHOC = (WrappedBlock,type)=>{
+
+    
 
     return (
-
+        
     )
 }
