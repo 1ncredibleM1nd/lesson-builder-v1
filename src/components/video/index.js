@@ -1,14 +1,9 @@
-import {React} from 'react'
+import { React } from "react";
 
-import ReactPlayer from 'react-player'
+import ReactPlayer from "react-player";
 
-const VideoPlayer = (url)=>{
-
-
-    return (
-        <ReactPlayer url={url}/> 
-    )
-
-}
+const VideoPlayer = (url) => {
+	return <ReactPlayer url={url} />;
+};
 
 export default VideoPlayer;
