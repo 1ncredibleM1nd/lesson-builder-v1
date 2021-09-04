@@ -11,18 +11,11 @@ const [cardList, setCardList] = useState ([
     {id:4, type:'slider', text:"Слайдер"},
     {id:5, type:'audio', text:"Аудио"},
     {id:6, type:'file', text:"Файл"},
-    {id:7, type:'video', text:""},
+    {id:7, type:'video', text:"Видео"},
     ])
 const [choice, setChoice]= useState(false)
 const buttonPlus = !choice? <Button type="primary" shape="round" onClick={()=>setChoice(true)} icon={<PlusOutlined />}/>: null
-const choicePanel =choice ? <Row> {cardList.map(card=>)}
-    {/* <Button type="primary">Заголовок</Button>
-    <Button type="primary">Текст</Button>
-    <Button type="primary">Картинка</Button>
-    <Button type="primary">Слайдер</Button>
-    <Button type="primary">Аудио</Button>
-    <Button type="primary">Файл</Button>
-    <Button type="primary">Видео</Button>  */}
+const choicePanel =choice ? <Row> {cardList.map(card=><Button key={card.id} type='primary' onClick>{card.text}</Button>)}
     </Row>: null
 
 return (

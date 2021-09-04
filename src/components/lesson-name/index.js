@@ -17,7 +17,7 @@ const LessonName = ()=>{
 
     
     const lessonName = !editable ?  <h2 className='lesson-title'onClick={()=>setEditable(true)}>{name}</h2> :
-     <Input className='inputName' size="big" placeholder="Новое название" onPressEnter={(e)=> {setLessonName(e)}}/>
+     <Input className='inputName' size="big" placeholder={name}  onPressEnter={(e)=> {setLessonName(e)}}/>
     
     
     return (
