@@ -10,6 +10,8 @@ function App() {
 	const buttonCreate = !lessonCreated ? (
 		<Row justify="center">
 			<Button
+				
+				className='prodamus-btn btn-create'
 				type="primary"
 				onClick={() => {
 					setCreate(true);

@@ -1,9 +1,9 @@
 import { React, useState } from "react";
 import { Button, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import "./modal-creator.sass";
+import "./block-generator.sass";
 
-const ModalCreator = ({createBlocks}) => {
+const BlockGenerator= ({createBlocks}) => {
 	const [cardList, setCardList] = useState([
 		{ id: 1, type: "header", text: "Заголовок" },
 		{ id: 2, type: "text", text: "Текст" },
@@ -16,6 +16,7 @@ const ModalCreator = ({createBlocks}) => {
 	const [choice, setChoice] = useState(false);
 	const buttonPlus = !choice ? (
 		<Button
+		    className='green'
 			type="primary"
 			shape="round"
 			onClick={() => setChoice(true)}
@@ -26,7 +27,7 @@ const ModalCreator = ({createBlocks}) => {
 		<Row>
 			{" "}
 			{cardList.map((card) => (
-				<Button key={card.id}  onClick={()=>createBlocks(card.type)}type="primary">
+				<Button className='prodamus-btn' key={card.id}  onClick={()=>createBlocks(card.type)}type="primary">
 					{card.text}
 				</Button>
 			))}
@@ -41,4 +42,4 @@ const ModalCreator = ({createBlocks}) => {
 	);
 };
 
-export default ModalCreator;
+export default BlockGenerator;

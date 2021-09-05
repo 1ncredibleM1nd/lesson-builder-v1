@@ -23,9 +23,8 @@ const LessonName = () => {
 			{name}
 		</h2>
 	) : (
-		<Input
+		<Input 
 			className="inputName"
-			size="big"
 			placeholder={name}
 			onPressEnter={(e) => {
 				setLessonName(e);
@@ -34,7 +33,7 @@ const LessonName = () => {
 		/>
 	);
 
-	return <div className="title-container">{lessonName}</div>;
+	return <> {lessonName}</>
 };
 
 export default LessonName;
