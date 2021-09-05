@@ -3,7 +3,7 @@ import { Button, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import "./modal-creator.sass";
 
-const ModalCreator = () => {
+const ModalCreator = ({createBlocks}) => {
 	const [cardList, setCardList] = useState([
 		{ id: 1, type: "header", text: "Заголовок" },
 		{ id: 2, type: "text", text: "Текст" },
@@ -26,7 +26,7 @@ const ModalCreator = () => {
 		<Row>
 			{" "}
 			{cardList.map((card) => (
-				<Button key={card.id} type="primary" onClick>
+				<Button key={card.id}  onClick={()=>createBlocks(card.type)}type="primary">
 					{card.text}
 				</Button>
 			))}
