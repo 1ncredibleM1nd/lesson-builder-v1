@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState} from "react";
 import { Input } from "antd";
 import "./lesson-title.sass";
 
@@ -7,8 +7,15 @@ const LessonName = () => {
 	const [name, setName] = useState("Untitled");
 
 	const setLessonName = (e) => {
-		setName(e.target.value);
-		setEditable(false);
+		if (e.target.value.length > 0) {
+			setName(e.target.value);
+			setEditable(false);
+		}
+
+		if (e.target.value.length === 0) {
+			setName(name);
+			setEditable(false);
+		}
 	};
 
 	const lessonName = !editable ? (
@@ -23,6 +30,7 @@ const LessonName = () => {
 			onPressEnter={(e) => {
 				setLessonName(e);
 			}}
+			onBlur={(e) => setLessonName(e)}
 		/>
 	);
 
