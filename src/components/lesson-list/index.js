@@ -32,11 +32,14 @@ const LessonList = () => {
 	const testingBlock = Editor(LessonTitle)
 	return (
 		<Row className='lessonlist-layout'>
-			<Col span={18} offset={3}>
-				<Row justify="center">
-					<BlockGenerator createBlocks={createBlocks} />
-					{/* {lessonBlocks}	 */}
-					{/* {testingBlock} */}
+			<Col span={20} offset={2}>
+				<Row  justify="center">
+				<BlockGenerator createBlocks={createBlocks} />
+				</Row>
+				<Row justify='center'>
+					<Col span={18}>
+					{testingBlock}
+					</Col>
 				</Row>
 			</Col>
 		</Row>

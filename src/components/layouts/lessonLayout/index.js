@@ -1,10 +1,10 @@
-import LessonList from "../lesson-list";
-import LessonName from "../lesson-name";
-import HeaderLayout from "../layouts/header-layout";
+import LessonList from "../../lesson-list";
+import LessonName from "../../lesson-name";
+import HeaderLayout from "../header-layout";
 import { Button, Modal, Space } from "antd";
 import { SaveOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import ProdamusContext from "../context";
+import ProdamusContext from "../../context";
 
 const LessonLayout = () => {
 	const [editor, setEditor] = useState(false);
@@ -31,7 +31,7 @@ const LessonLayout = () => {
 			<ProdamusContext.Provider value={editor}>                              {/* Now context send mode to components, but it can be used for transmit server to deep components*/}
 				<HeaderLayout>
 					<LessonName />
-					<Button ghost onClick={() => setMode} className="preview">
+					<Button ghost onClick={() => setMode()} className="preview">
 						Предпросмотр
 					</Button>
 					<Space>                                     {/*Space can be deleted when server will start*/}

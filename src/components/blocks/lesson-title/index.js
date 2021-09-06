@@ -1,7 +1,7 @@
-import { React, useState, useEffect } from "react";
+import { React} from "react";
 
-const LessonTitle = () => {
-	return <h2>Заголовок урока</h2>;
+const LessonTitle = (text) => {
+	return <h1>Заголовок урока</h1>;
 };
 
 export default LessonTitle;

@@ -1,8 +1,6 @@
 import React from 'react'
 import {Row,Col} from 'antd'
 import './header-layout.sass'
-
-
 const HeaderLayout = (props)=>{
 return (
     <Row className='header-layout' align='middle'>

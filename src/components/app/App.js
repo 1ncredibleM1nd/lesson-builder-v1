@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import Navbar from "../navbar";
 import { Row, Col, Button } from "antd";
-import LessonLayout from "../lessonLayout";
+import LessonLayout from "../layouts/lessonLayout";
 import "./app.sass";
 
 function App() {
