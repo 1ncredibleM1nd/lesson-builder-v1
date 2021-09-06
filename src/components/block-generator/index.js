@@ -7,7 +7,7 @@ const BlockGenerator= ({createBlocks}) => {
 	const [cardList, setCardList] = useState([
 		{ id: 1, type: "header", text: "Заголовок" },
 		{ id: 2, type: "text", text: "Текст" },
-		{ id: 3, type: "image", text: "Картинка" },
+		{ id: 3, type: "image", text: "Изображение" },
 		{ id: 4, type: "slider", text: "Слайдер" },
 		{ id: 5, type: "audio", text: "Аудио" },
 		{ id: 6, type: "file", text: "Файл" },
@@ -23,6 +23,9 @@ const BlockGenerator= ({createBlocks}) => {
 			icon={<PlusOutlined />}
 		/>
 	) : null;
+
+
+	//Generate buttons for creating blocks
 	const choicePanel = choice ? (
 		<Row>
 			{" "}
