@@ -1,11 +1,11 @@
 import { React, useState} from "react";
-import {v4 as  uuidv4} from 'uuid'
+import {v4 as  uuidv4} from 'uuid' // Library for generation unique id
 import { Col, Row } from "antd";
-
 import BlockGenerator from "../block-generator";
 import Editor from "../editor";
 import LessonTitle from "../blocks/lesson-title";
 import VideoBlock from "../blocks/video";
+import ImageBlock from "../blocks/image-block";
 import TextBlock from "../blocks/text-block";
 import SliderBlock from "../blocks/slider-block"
 import TitleBlock from '../blocks/lesson-title'
@@ -13,8 +13,7 @@ import './lesson-list.sass'
 
 const LessonList = () => {
 	const [blocks, setBlocks] = useState([]);
-
-
+	// Loop through all types of blocks in response to a button press
 	const createBlocks = (type) => {
 		switch (type) {
 			case "header":
@@ -99,15 +98,28 @@ const LessonList = () => {
 				throw Error("Element unknown");
 		}
 	};
+
+	// const deleteData =(id)=>{
+	// 	console.log (id)
+	// }
+	// const deleteItem =(id)=>{
+	// 	const index =  blocks.findIndex(elem=>elem.id===id)
+	// 	const newBlocks= [...blocks.slice(0,index), ...blocks.slice(index+1)]
+	// 	setBlocks(newBlocks);
+	// }
 	const testBlock = blocks.map(block=>{
 		switch (block.type) {
 			case 'header':
-				return Editor(TitleBlock)
-				break;
+				return <Editor ><TitleBlock/></Editor>
+			case 'text':
+				return <Editor> <TextBlock/></Editor>	
+			case 'image': 
+			return <Editor><ImageBlock/></Editor>	
 			default:
 				break;
 		}
 	})
+	
 	
 	
 	return (

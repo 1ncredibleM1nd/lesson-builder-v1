@@ -3,7 +3,7 @@ import Navbar from "../navbar";
 import { Row, Col, Button, BackTop } from "antd";
 import LessonLayout from "../layouts/lessonLayout";
 import "./app.sass";
-import { Footer } from "antd/lib/layout/layout";
+
 
 
 function App() {
