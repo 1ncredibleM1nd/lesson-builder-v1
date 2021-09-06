@@ -26,6 +26,8 @@ const LessonLayout = () => {
 		});
 	}
 
+	
+
 	return (
 		<>
 			<ProdamusContext.Provider value={editor}>                              {/* Now context send mode to components, but it can be used for transmit server to deep components*/}

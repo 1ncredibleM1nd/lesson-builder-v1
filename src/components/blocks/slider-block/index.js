@@ -1,9 +1,11 @@
 import { React, useState, useEffect } from "react";
 import { Carousel } from "antd";
 
-const ProdSlider = () => {
+import './slideBlock.sass'
+
+const SliderBlock = () => {
 	const contentStyle = {
-		height: "160px",
+		height: "400px",
 		color: "#fff",
 		lineHeight: "160px",
 		textAlign: "center",
@@ -28,4 +30,4 @@ const ProdSlider = () => {
 	);
 };
 
-export default ProdSlider;
+export default SliderBlock;

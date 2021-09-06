@@ -6,8 +6,7 @@ import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import "./editor.sass";
 
 const Editor = (WrappedBlock, type) => {
-	const [url, setUrl] = useState("");
-
+	
   function confirm(e) {
     
     message.success('Блок успешно удалён');
@@ -21,7 +20,7 @@ const Editor = (WrappedBlock, type) => {
 				const editingContent = !editing ? (
 					<Row className="editing-block" justify="space-between" align="middle">
 						<Col span={18}>
-							<WrappedBlock propText={url} />
+							<WrappedBlock  />
 						</Col>
 						<Col order={1} span={2}>
 							<Button primary>
@@ -35,7 +34,7 @@ const Editor = (WrappedBlock, type) => {
 						</Col>
 					</Row>
 				) : null;
-				const previewContent = editing ? <WrappedBlock propText={url} /> : null;
+				const previewContent = editing ? <WrappedBlock  /> : null;
 				return (
 					<>
 						{previewContent}

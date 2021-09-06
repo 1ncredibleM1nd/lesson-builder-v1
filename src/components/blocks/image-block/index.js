@@ -1,7 +1,7 @@
 import {React , useState, useEffect} from 'react'
 import { Image } from 'antd'
 
-const ProdImage =()=>{
+const ImageBlock =({src})=>{
 
     return(
         <Image
@@ -12,4 +12,4 @@ const ProdImage =()=>{
 
 }
 
-export default ProdImage;
+export default ImageBlock;

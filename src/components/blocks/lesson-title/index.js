@@ -1,7 +1,7 @@
-import { React} from "react";
+import { React } from "react";
 
-const LessonTitle = (text) => {
+const TitleBlock = (text) => {
 	return <h1>Заголовок урока</h1>;
 };
 
-export default LessonTitle;
+export default TitleBlock;

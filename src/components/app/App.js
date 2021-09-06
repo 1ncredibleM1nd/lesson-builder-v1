@@ -1,8 +1,10 @@
 import { React, useState } from "react";
 import Navbar from "../navbar";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, BackTop } from "antd";
 import LessonLayout from "../layouts/lessonLayout";
 import "./app.sass";
+import { Footer } from "antd/lib/layout/layout";
+
 
 function App() {
 	const [lessonCreated, setCreate] = useState(false);
@@ -10,7 +12,6 @@ function App() {
 	const buttonCreate = !lessonCreated ? (
 		<Row justify="center">
 			<Button
-				
 				className='prodamus-btn btn-create'
 				type="primary"
 				onClick={() => {
@@ -31,8 +32,13 @@ function App() {
 				<Col span={24}>
 					{buttonCreate}
 					{lessonLayout}
+
 				</Col>
 			</Row>
+			<BackTop>
+      <div className="ant-back-top-inner">Вверх</div>
+    </BackTop>
+		
 		</div>
 	);
 }
